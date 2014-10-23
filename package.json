@@ -21,6 +21,7 @@
     "karma": "^0.12.24",
     "karma-chrome-launcher": "^0.1.5",
     "karma-jasmine": "^0.1.5",
+    "karma-mocha": "^0.1.9",
     "mocha": "^2.0.1",
     "rewire": "^2.1.0",
     "supertest": "^0.14.0"
