@@ -21,6 +21,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+//lets add Bower things!
+app.use('/bower_components',  express.static(__dirname + '/bower_components'));
+
 
 app.use('/', index);
 app.use('/player', player);
