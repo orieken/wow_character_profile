@@ -4,13 +4,30 @@ block content
     h1= title
     p Welcome to #{title}
 
-    hr
-    div(ng-controller="playerController")
-        p Welcome {{player.name}}
-    hr
+    div.container-fluid
+        section(ng-controller="battlePetsController")
+            div.row
+                div.col-xs-4
+                div.col-xs-4
+                    ul
+                        li(ng-repeat="pet in battlePets.pets.collected")
+                                hr
+                                div.media
+                                    div(ng-class-odd="'pull-right'" ng-class-even="'pull-left'")
+                                        img.media-object(src="http://us.media.blizzard.com/wow/icons/56/{{pet.icon}}.jpg")
+                                    div.media-body
+                                        h4.media-heading {{pet.name}}
+                                            small   Level:  {{pet.stats.level}}
+                                        div.well.well-sm
+                                            div
+                                                ul
+                                                    li Health: {{pet.stats.health}}
+                                                    li Power: {{pet.stats.power}}
+                                                    li Speed: {{pet.stats.speed}}
+                                hr
+                div.col-xs-4
 
     script(src='bower_components/angular/angular.js')
     script(src='bower_components/angular-resource/angular-resource.js')
     script(src='/javascripts/app.js')
-    script(src='/javascripts/app/controllers/playerController.js')
-
+    script(src='/javascripts/app/controllers/battlePetsController.js')
