@@ -4,9 +4,9 @@ var app = require('../app');
 var expect = require('chai').expect;
 
 describe('GET /battle_pets', function () {
-    beforeEach(function () {
-        this.timeout(5000);
-    });
+    this.timeout(5000);
+
+    beforeEach(function () {});
     afterEach(function () {});
 
     var req = request(app);

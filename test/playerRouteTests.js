@@ -4,6 +4,7 @@ var app = require('../app');
 var expect = require('chai').expect;
 
 describe('GET /player', function () {
+    this.timeout(5000);
     beforeEach(function () {
     });
     afterEach(function () {
