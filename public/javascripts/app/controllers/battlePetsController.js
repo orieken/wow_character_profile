@@ -1,8 +1,8 @@
 'use strict';
 
-var battlePetsController = angular.module('battlePetsController', []);
+var App = angular.module('App', []);
 
-battlePetsController.controller("battlePetsController", function($scope, $http) {
+App.controller("battlePetsController", function($scope, $http) {
     $http.get('/battle_pets').success(function(data) {
         $scope.battlePets = data;
     });
